@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="purple">
+    <ion-title>
+      <ion-icon name="cart-outline"></ion-icon>
+      Product
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="softpurple">
+
+  <ion-grid>
+    <ion-col size="12" size-md="6" size-lg="6" *ngFor="let i of items">
+      <ion-card color="blue" (click)="Gotodetail(i)">
+        <img [src]="i.imagesURL" alt="7">
+        <ion-card-header>
+        <ion-card-title>{{ i.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{ i.price }} ฿
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-grid>
+
+</ion-content>
